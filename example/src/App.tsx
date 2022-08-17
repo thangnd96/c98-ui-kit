@@ -1,10 +1,16 @@
 import React from 'react'
 
-import { Button } from 'ui-kit'
-import 'ui-kit/dist/index.css'
+import { Button } from 'c98-ui-kit'
+import 'c98-ui-kit/dist/index.css'
 
 const App = () => {
-  return <Button className="text-white">C98 UI KIT 😄</Button>
+  return (
+    <div className='w-screen'>
+      <Button className='text-white-fa text-sm transition-all duration-300'>
+        C98 UI KIT ha 😄
+      </Button>
+    </div>
+  )
 }
 
 export default App
