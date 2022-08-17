@@ -20,7 +20,7 @@ const Button: FunctionComponent<
 > = ({ size, primary, className = '', children, ...props }) => {
   const buttonClass = useMemo(() => {
     const style =
-      'c98-button w-full px-6 rounded-full bg-grey text-fa hover:opacity-70 text-white-fa text-sm transition-all duration-300 hover:shadow-lg'
+      'c98-button w-full px-6 rounded-full bg-white/20 text-fa hover:opacity-70 text-white-fa text-sm transition-all duration-300 hover:shadow-lg'
 
     if (primary) {
       return style + ' bg-yellow'

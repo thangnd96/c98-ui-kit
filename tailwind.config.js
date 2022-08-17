@@ -9,7 +9,9 @@ module.exports = {
           DEFAULT: '#cda349'
         },
         grey: {
-          DEFAULT: '#454545'
+          DEFAULT: '#454545',
+          24: '#242424',
+          55: '#555555'
         },
         white: {
           DEFAULT: '#ffffff',

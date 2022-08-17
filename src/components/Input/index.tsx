@@ -110,7 +110,7 @@ const Input: ForwardRefRenderFunction<InputRef, InputProps> = (
   return (
     <div
       className={mergeClass([
-        'c98-input-wrapper w-full flex items-center bg-grey rounded-full overflow-hidden',
+        'c98-input-wrapper w-full flex items-center bg-grey-24 rounded-full overflow-hidden',
         inputWrapperSizeClass,
         className
       ])}
@@ -130,7 +130,7 @@ const Input: ForwardRefRenderFunction<InputRef, InputProps> = (
       <input
         {...props}
         className={mergeClass([
-          'c98-input h-full flex-1 bg-transparent outline-none border-0 text-white-fa',
+          'c98-input h-full flex-1 bg-transparent outline-none border-0 text-white placeholder-grey-55',
           inputSizeClass,
           inputClassName
         ])}
