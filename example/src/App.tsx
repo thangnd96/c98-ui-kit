@@ -5,12 +5,23 @@ import 'c98-ui-kit/dist/index.css'
 
 const App = () => {
   return (
-    <div style={{ width: '100%', height: '100vh', backgroundColor: '#000000'}}>
-      <Button className='text-white-fa text-sm transition-all duration-300'>
-        C98 UI KIT ha 😄
-      </Button>
+    <div
+      style={{
+        width: '100%',
+        height: '100vh',
+        backgroundColor: '#000000',
+        padding: '40px'
+      }}
+    >
+      <Button>C98 UI KIT ha 😄</Button>
 
-      <Input className='mt-10' />
+      <div style={{ marginTop: '10px' }}>
+        <Input
+          inputProps={{
+            placeholder: 'test placeholder'
+          }}
+        />
+      </div>
     </div>
   )
 }

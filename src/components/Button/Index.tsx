@@ -12,7 +12,7 @@ import { mergeClass } from '../../utils/func'
 interface ButtonProps {
   size?: 'small' | 'medium' | 'large'
   primary?: boolean
-  className: string
+  className?: string
 }
 
 const Button: FunctionComponent<
@@ -35,10 +35,10 @@ const Button: FunctionComponent<
         return 'h-8'
       }
       case 'large': {
-        return 'h-14'
+        return 'h-12'
       }
       default: {
-        return 'h-11'
+        return 'h-10'
       }
     }
   }, [size])

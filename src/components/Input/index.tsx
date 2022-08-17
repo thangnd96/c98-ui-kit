@@ -54,13 +54,13 @@ const Input: ForwardRefRenderFunction<InputRef, InputProps> = (
   const inputWrapperSizeClass = useMemo(() => {
     switch (size) {
       case 'small': {
-        return 'h-8'
+        return 'h-6 px-2 py-1 text-xs'
       }
       case 'large': {
-        return 'h-14'
+        return 'h-12 px-6 py-3 text-sm'
       }
       default: {
-        return 'h-11'
+        return 'h-10 px-4 py-2 text-xs'
       }
     }
   }, [size])
@@ -71,10 +71,38 @@ const Input: ForwardRefRenderFunction<InputRef, InputProps> = (
         return 'text-xs'
       }
       case 'large': {
-        return 'text-base'
+        return 'text-sm'
       }
       default: {
-        return 'text-sm'
+        return 'text-xs'
+      }
+    }
+  }, [size])
+
+  const iconLeftMargin = useMemo(() => {
+    switch (size) {
+      case 'small': {
+        return 'mr-2'
+      }
+      case 'large': {
+        return 'mr-6'
+      }
+      default: {
+        return 'mr-4'
+      }
+    }
+  }, [size])
+
+  const iconRightMargin = useMemo(() => {
+    switch (size) {
+      case 'small': {
+        return 'ml-2'
+      }
+      case 'large': {
+        return 'ml-6'
+      }
+      default: {
+        return 'ml-4'
       }
     }
   }, [size])
@@ -82,7 +110,7 @@ const Input: ForwardRefRenderFunction<InputRef, InputProps> = (
   return (
     <div
       className={mergeClass([
-        'c98-input-wrapper w-full flex items-center bg-grey rounded-full overflow-hidden px-5 py-3',
+        'c98-input-wrapper w-full flex items-center bg-grey rounded-full overflow-hidden',
         inputWrapperSizeClass,
         className
       ])}
@@ -90,7 +118,8 @@ const Input: ForwardRefRenderFunction<InputRef, InputProps> = (
       {leftIcon && (
         <div
           className={mergeClass([
-            'c98-left-icon-wrapper flex-none flex items-center justify-center mr-5',
+            'c98-left-icon-wrapper h-full flex-none flex items-center justify-center',
+            iconLeftMargin,
             leftIconWrapper
           ])}
         >
@@ -111,7 +140,8 @@ const Input: ForwardRefRenderFunction<InputRef, InputProps> = (
       {rightIcon && (
         <div
           className={mergeClass([
-            'c98-left-icon-wrapper flex-none flex items-center justify-center ml-5',
+            'c98-left-icon-wrapper h-full flex-none flex items-center justify-center',
+            iconRightMargin,
             rightIconWrapper
           ])}
         >
