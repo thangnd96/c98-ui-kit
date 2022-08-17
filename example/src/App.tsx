@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { ExampleComponent } from 'ui-kit'
+import { Button } from 'ui-kit'
 import 'ui-kit/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="C98 UI KIT 😄" />
+  return <Button className="text-white">C98 UI KIT 😄</Button>
 }
 
 export default App
