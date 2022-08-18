@@ -59,13 +59,13 @@ const InputComponent: ForwardRefRenderFunction<HTMLInputElement, IInputProps> =
     const inputTitleClass = useMemo(() => {
       switch (inputSize) {
         case 'small': {
-          return 'text-white-fa px-2 text-sm'
+          return 'px-2 text-sm'
         }
         case 'large': {
-          return 'text-white-fa px-6 text-base'
+          return 'px-6 text-base'
         }
         default: {
-          return 'text-white-fa px-4 text-sm'
+          return 'px-4 text-sm'
         }
       }
     }, [inputSize])
@@ -103,7 +103,7 @@ const InputComponent: ForwardRefRenderFunction<HTMLInputElement, IInputProps> =
         {title && (
           <div
             className={mergeClass([
-              'c98-input-title',
+              'c98-input-title mb-[6px] text-yellow',
               inputTitleClass,
               titleClassName
             ])}
