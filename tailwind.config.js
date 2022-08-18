@@ -1,3 +1,6 @@
+/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.{html,js,ts,jsx,tsx}'],
@@ -5,10 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        ...colors,
         yellow: {
           DEFAULT: '#cda349'
         },
-        grey: {
+        gray: {
           DEFAULT: '#454545',
           24: '#242424',
           55: '#555555'

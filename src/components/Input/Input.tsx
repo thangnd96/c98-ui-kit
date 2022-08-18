@@ -10,19 +10,19 @@ import type { IInputProps } from './types'
 
 import { mergeClass } from '../../utils/func'
 
-export const Input: ForwardRefRenderFunction<HTMLInputElement, IInputProps> = (
+const InputComponent: ForwardRefRenderFunction<HTMLInputElement, IInputProps> = (
   {
-    inputSize,
     leftIcon,
     rightIcon,
     name = '',
     title = '',
-    titleClassName = '',
-    labelClassName = '',
-    wrapperClassName = '',
-    className = '',
-    leftIconWrapper = '',
-    rightIconWrapper = '',
+    className,
+    titleClassName,
+    labelClassName,
+    inputSize = 'medium',
+    leftIconWrapper,
+    wrapperClassName,
+    rightIconWrapper,
     ...props
   },
   ref
@@ -114,7 +114,7 @@ export const Input: ForwardRefRenderFunction<HTMLInputElement, IInputProps> = (
       <label
         id={name}
         className={mergeClass([
-          'c98-input-label w-full flex items-center bg-grey-24 rounded-full overflow-hidden',
+          'c98-input-label w-full flex items-center bg-gray-24 rounded-full overflow-hidden',
           inputLabelSizeClass,
           labelClassName
         ])}
@@ -138,7 +138,7 @@ export const Input: ForwardRefRenderFunction<HTMLInputElement, IInputProps> = (
           {...props}
           name={name}
           className={mergeClass([
-            'c98-input h-full flex-1 bg-transparent outline-none border-0 text-white placeholder-grey-55',
+            'c98-input h-full flex-1 bg-transparent outline-none border-0 text-white placeholder-gray-55',
             inputSizeClass,
             className
           ])}
@@ -161,4 +161,4 @@ export const Input: ForwardRefRenderFunction<HTMLInputElement, IInputProps> = (
   )
 }
 
-export default forwardRef(Input)
+export const Input = forwardRef(InputComponent)

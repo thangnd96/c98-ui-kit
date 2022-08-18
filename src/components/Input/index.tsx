@@ -1,2 +1,2 @@
-export { Input } from './input'
+export { Input } from './Input'
 export type { IInputProps } from './types'

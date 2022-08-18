@@ -12,7 +12,7 @@ import { mergeClass } from '../../utils/func'
 
 export const Button: FunctionComponent<
   PropsWithChildren<IButtonProps> & HTMLAttributes<HTMLButtonElement>
-> = ({ size, primary, className = '', children, ...props }) => {
+> = ({ size = 'medium', primary = false, className, children, ...props }) => {
   const buttonClass = useMemo(() => {
     const style =
       'c98-button w-full px-6 rounded-full bg-white/20 text-fa hover:opacity-70 text-white-fa text-sm transition-all duration-300 hover:shadow-lg'
@@ -46,10 +46,4 @@ export const Button: FunctionComponent<
       {children}
     </button>
   )
-}
-
-Button.defaultProps = {
-  size: 'medium',
-  primary: false,
-  className: ''
 }
