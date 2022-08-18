@@ -18,6 +18,6 @@
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src", "**/*.ts", "**/*.tsx", "**/*d.ts", "**/*d.tsx",],
+  "include": ["src"],
   "exclude": ["node_modules", "dist", "example"]
 }
