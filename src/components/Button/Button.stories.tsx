@@ -19,5 +19,5 @@ Button.args = {
   size: 'medium',
   primary: false,
   children: 'Button',
-  className: ''
+  className: '',
 }

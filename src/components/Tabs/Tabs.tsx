@@ -8,13 +8,25 @@ import type { ITab, ITabsProps } from './types'
 import { getLength, mergeClass } from '../../utils/func'
 
 export const Tabs: FunctionComponent<ITabsProps> = ({
-  tabs = [],
+  tabs = [
+    {
+      label: 'Tab 1',
+      content: 'Content tab 1'
+    },
+    {
+      label: 'Tab 2',
+      content: 'Content tab 2'
+    },
+    {
+      label: 'Tab 3',
+      content: 'Content tab 3'
+    }
+  ],
   className,
   defaultTab = 0,
-  onChange = () => null
+  onChange
 }) => {
   const [tabIndex, setTabIndex] = useState<number>(() => {
-    console.log('first')
     if (!defaultTab) return 0
 
     const index = defaultTab - 1
@@ -25,17 +37,16 @@ export const Tabs: FunctionComponent<ITabsProps> = ({
     return index
   })
 
-  console.log('🚀 ~ file: Tabs.tsx ~ line 26 ~ tabIndex', tabIndex)
-
   const handleChangeTab = (tabSelected: number, tab: ITab) => {
-    console.log('🚀 ~ file: Tabs.tsx ~ line 28 ~ tabSelected', tabSelected)
     setTabIndex(tabSelected)
 
-    onChange(tabSelected, tab)
+    if (onChange) {
+      onChange(tabSelected, tab)
+    }
   }
 
   return (
-    <div className={mergeClass([className])}>
+    <div className={mergeClass(['text-white', className])}>
       <Tab
         tabs={tabs}
         tabActive={tabIndex}
@@ -44,7 +55,7 @@ export const Tabs: FunctionComponent<ITabsProps> = ({
       />
 
       {tabs[tabIndex].content && (
-        <div className={mergeClass([className])}>{tabs[tabIndex].content}</div>
+        <div className={mergeClass(['p-4', className])}>{tabs[tabIndex].content}</div>
       )}
     </div>
   )

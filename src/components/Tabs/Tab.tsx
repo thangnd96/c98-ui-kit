@@ -26,9 +26,9 @@ const Tab: FunctionComponent<ITabProps> = ({
           onClick={handleChangeTab(index, tab)}
           key={`${tab.label}-${index}`}
           className={mergeClass([
-            'c98-tab',
+            'c98-tab py-2 px-4 bg-transparent relative cursor-pointer transition-colors duration-300 hover:text-yellow after:content-[""] after:h-[2px] after:absolute after:left-0 after:bottom-0 after:w-full after:transition-full after:duration-300 after:scale-0 after:bg-transparent',
             tab.className,
-            { 'c98-tab-active text-yellow': isActive }
+            { 'c98-tab-active text-yellow after:bg-yellow after:scale-100': isActive }
           ])}
         >
           {tab.label}
@@ -39,7 +39,7 @@ const Tab: FunctionComponent<ITabProps> = ({
 
   return (
     <div
-      className={mergeClass(['c98-tab-wrapper flex items-center', className])}
+      className={mergeClass(['c98-tab-wrapper flex items-center border-b border-gray-55', className])}
     >
       {renderTab()}
     </div>
