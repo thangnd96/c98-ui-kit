@@ -6,6 +6,7 @@
     "test": "jest",
     "build": "rollup -c",
     "storybook": "start-storybook -p 6006",
+    "storybook-docs": "start-storybook --docs --no-manager-cache",
     "build-storybook": "build-storybook"
   },
   "repository": {

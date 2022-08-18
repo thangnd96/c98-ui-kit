@@ -1,5 +1,5 @@
 export interface IButtonProps {
-  size?: 'small' | 'medium' | 'large'
   primary?: boolean
   className?: string
+  size?: 'small' | 'medium' | 'large'
 }
