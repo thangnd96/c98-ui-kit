@@ -5,7 +5,7 @@ import Tab from './Tab'
 
 import type { ITab, ITabsProps } from './types'
 
-import { getLength, mergeClass } from '../../utils/func'
+import { getLength, mergeClass } from '../../utils'
 
 export const Tabs: FunctionComponent<ITabsProps> = ({
   tabs = [

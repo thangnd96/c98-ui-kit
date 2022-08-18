@@ -7,7 +7,7 @@ import React, {
 
 import type { IButtonProps } from './types'
 
-import { mergeClass } from '../../utils/func'
+import { mergeClass } from '../../utils'
 
 export const Button: FunctionComponent<
   PropsWithChildren<IButtonProps> & HTMLAttributes<HTMLButtonElement>

@@ -8,7 +8,7 @@ import React, {
 
 import type { IInputProps } from './types'
 
-import { mergeClass } from '../../utils/func'
+import { mergeClass } from '../../utils'
 
 const InputComponent: ForwardRefRenderFunction<HTMLInputElement, IInputProps> =
   (

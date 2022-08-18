@@ -3,7 +3,7 @@ import React, { memo, FunctionComponent } from 'react'
 
 import type { ITab, ITabProps } from './types'
 
-import { mergeClass } from '../../utils/func'
+import { mergeClass } from '../../utils'
 
 const Tab: FunctionComponent<ITabProps> = ({
   tabs,
