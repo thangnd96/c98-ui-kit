@@ -15,4 +15,8 @@ const mergeClass = (className: IClassName | IClassName[]): string => {
   return twMerge(classnames(className))
 }
 
-export { getLength, mergeClass }
+const normalizeHtml = (str: string): string => {
+  return str && str.replace(/&nbsp;|\u202F|\u00A0/g, ' ')
+}
+
+export { getLength, mergeClass, normalizeHtml }
